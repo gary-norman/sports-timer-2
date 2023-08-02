@@ -98,12 +98,20 @@ function spotifyPLaylist() {
 
 /* Set the width of the settings sidebar to 250px (show it) */
 function openNav() {
-    document.getElementById("settingsPanel").style.width = "450px";
-  }
+    document.getElementById("settingsPanel").style.right = "-3px";
+    // document.getElementById("periodText").style.visibility = "visible"
+    // document.getElementById("periodTimeDisplay").style.visibility = "visible"
+    // document.getElementById("breakText").style.visibility = "visible"
+    // document.getElementById("breakTimeDisplay").style.visibility = "visible"
+}
   
   /* Set the width of the settings sidebar to 0 (hide it) */
   function closeNav() {
-    document.getElementById("settingsPanel").style.width = "0px";
+    document.getElementById("settingsPanel").style.right = "-452px";
+    // document.getElementById("periodText").style.visibility = "hidden"
+    // document.getElementById("periodTimeDisplay").style.visibility = "hidden"
+    // document.getElementById("breakText").style.visibility = "hidden"
+    // document.getElementById("breakTimeDisplay").style.visibility = "hidden"
   } 
 
 
@@ -273,7 +281,7 @@ function mainButtonStyling() {
 
 // fullscreen
 
-/* Get the documentElement (<html>) to display the page in fullscreen */
+/* Get the documentElement (<html>) to visibility the page in fullscreen */
 var elem = document.documentElement;
 
 /* View in fullscreen */
