@@ -19,7 +19,7 @@ img:hover {
 /*--------------------  SETTINGS --------------------*/
 
 .settings {
-width: 450px;
+width: 0px;
 height: 30px;
 background: rgb(8,34,75);
 background: linear-gradient(180deg, rgba(8,34,75,1) 0%, rgba(9,53,121,1) 31%, rgba(14,125,219,1) 100%);
@@ -28,68 +28,38 @@ align-items: center;
 position: fixed;
 padding: 0px;
 top: -5px;
-right: -452px;
+right: -3px;
 border: 2px solid rgb(101, 163, 233);
 border-radius: 0px 0px 0px 10px;
+overflow-x: hidden;
+transition: 0.5s;
 }
 
-.menu-button-container {
-    /* display: none; */
-    /* height: 100%; */
-    width: 25px;
-    cursor: pointer;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-  }
-  
-  #menu-toggle {
-    display: none;
-  }
-
-/*--------------------  menu button -------------*/
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-  display: flex;
-  background-color: #fff;
-  position: fixed;
-  right: 454px;
-  /* position: absolute; */
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
+.closebtn {
+    padding: 0px 0px 5px 5px;
+    font-size: 32px;
+    text-decoration: none;
+    color: #97bbfa;
+}
+.closebtn:hover {
+    color: rgb(73, 29, 29);
 }
 
-.menu-button::before {
-  content: '';
-  margin-top: -8px;
+.openbtn {
+    position: fixed;
+    right: 5px;
+    font-size: 20px;
+    padding: 0;
+    margin: 0px 8px;
+    border: none;
+    background-color: black;
+    color: rgb(159, 193, 208);
 }
 
-.menu-button::after {
-  content: '';
-  margin-top: 8px;
+.openbtn:hover {
+    animation: none;
+    color: #FFF;
 }
-/*  Adding Functionality to the Hamburger Menu with CSS  */
-#menu-toggle:checked + .menu-button-container .menu-button::before {
- margin-top: 0px;
- transform: rotate(45deg);
-  }
-  
-#menu-toggle:checked + .menu-button-container .menu-button {
- background: rgba(255, 255, 255, 0);
-  }
-  
-#menu-toggle:checked + .menu-button-container .menu-button::after {
- margin-top: 0px;
-  /*  transforms the hamburger icon into a cross  */
- transform: rotate(-45deg);
-  }
-
-#periodText, #periodTimeDisplay, #breakText, #breakTimeDisplay {
-margin: 0px;
-}
-
 /* ------------------------ FULLSCREEN _---------------*/
 
 .full {
@@ -177,7 +147,7 @@ button {
     margin: 5px;
     text-decoration: none;
     border: 3px solid rgba(255, 255, 255, 0);
-    border-radius: 40px;
+    border-radius: 10px;
 }
 button.plusMinus {
     font-size: 40px;

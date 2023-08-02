@@ -96,7 +96,15 @@ function spotifyPLaylist() {
     spotListFull = spotiList;
 }
 
-
+/* Set the width of the settings sidebar to 250px (show it) */
+function openNav() {
+    document.getElementById("settingsPanel").style.width = "450px";
+  }
+  
+  /* Set the width of the settings sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("settingsPanel").style.width = "0px";
+  } 
 
 
 //functions for the buttons
