@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="index.js"></script>
+    <link rel="icon" sizes="16x16 32x32" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="timer.css">
+<!--    <link rel="stylesheet" href="timer2.css">-->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
+    <title>Hockey Timer</title>
+    <style>
+       
+    </style>
+
+  </head>
+   <body>
+       <div class="full">
+       <button onclick="document.documentElement.requestFullscreen()">FULL</button>
+       <button onclick="closeFullscreen();">EXIT</button>
+    </div>
+        <div class="settings">
+            <div class="flexGrow1"><p id="periodText" onclick="editPeriod()">PERIOD TIME</p></div>
+                <div class="flexGrow2 flexBetween">
+                    <p id="periodTimeDisplay">20</p>
+                        <p id="breakTimeDisplay">05</p>
+                </div>
+            <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
+        </div>
+     <div>
+         <div class="flexVert">
+             <button class="plusMinus" id="homeMinus" onclick="minusOneToHome()">-</button>
+                <button class="red" id="homeReset" onclick="resetHome()">RESET</button>
+             <button class="plusMinus" id="homePlus"  onclick="plusOneToHome()">+</button>
+         </div>
+            <div class="flexVert">
+                <div id="clickToEditH" class="clickToEdit" onclick="renameHome()"><p id='homeName'>LIGHT</p></div>
+                <p class="score" id="homeScoreDisplay" onclick="plusOneToHome()">00<p>
+            </div>
+                <div class="flexVert" style="justify-content: center; gap: 10px;">
+                    <button class="gameOn" id="gameOn" onclick="gameOn()">PERIOD</button>
+                        <img id="mainImage" class="mainImageStd" onmouseover="mainButtonStyling()" onclick="mainButtonTimer()" src="logo.png" alt="BRHC logo">
+                    <button class="gameOff" id="gameOff" onclick="gameOff()">BREAK</button>
+                </div>
+                <div class="flexVert">
+                    <div id="clickToEditA" class="clickToEdit" onclick="renameAway()"><p id="awayName">DARK</p></div>
+                    <p class="score" id="awayScoreDisplay" onclick="plusOneToAway()">00<p>
+                </div>
+        <div class="flexVert">
+            <button class="plusMinus" id="awayMinus" onclick="minusOneToAway()">-</button>
+                <button class="red" id="awayReset" onclick="resetAway()">RESET</button>
+            <button class="plusMinus" id="awayPlus" onclick="plusOneToAway()">+</button>
+        </div>
+     </div>
+
+     <div class="timeRow">
+        <div class="flexVert">
+            <button class="plusMinus" id='clockMinus1' onclick="minusOneToClock()">-1</button>
+                <button id='clockStart' onclick="startTimer()">start</button>
+                    <button class="red" id='clockReset' onclick="resetClock()">RESET</button>
+            <button class="plusMinus"  id='clockMinus5' onclick="minusFiveToClock()">-5</button>
+        </div>
+         <h1 class="time" id="timeDisplay" onclick="startTimer()">00:00</h1>
+            <div class="flexVert">
+                <button class="plusMinus" id='clockPlus1' onclick="plusOneToClock()">+1</button>
+                    <button id='clockStop' onclick="stopTimer()">stop</button>
+                        <button class="red" id='clockReset' onclick="resetClock()">RESET</button>
+                <button class="plusMinus" id='clockPlus5' onclick="plusFiveToClock()">+5</button>
+            </div>
+        </div>
+   </body>
+</html>

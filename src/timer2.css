@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Orbitron&family=Oxanium&family=Sarpanch:wght@600&family=Tomorrow&display=swap');
+
+body {
+    background-color: black;
+    color: red;
+    font-family: 'Orbitron', sans-serif;
+
+}
+#period {
+    font-size: 40px;
+    color:red;
+    text-transform: uppercase;
+}
+.allCaps {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* -------------- animations -------------- */
+
+@keyframes fadedZoom {
+    from {font-size: 0px; opacity: 0;}
+    to {font-size: 30px; opacity: 1;}
+}
+
+@keyframes rotateZ {
+    from {transform: rotate3d(0);}
+    to {transform: rotate3d(1, 0, 0, 180deg);}
+}
+
+@keyframes squish {
+    from {height: 100%}
+    to {height: 0%}
+}
+
+@keyframes fadedBorder {
+    from {border: 3px solid rgba(255, 255, 255, 0);}
+    to {border: 3px solid rgba(255, 255, 255, 1);}
+}
+
+/*-------------------- spotify image ------------------*/
+#spotifyImage {
+    width: 50px;
+}
+
+/*-------------------- main image ------------------*/
+img.mainImageStd {
+    width: 200px;
+}
+img.mainImageStop {
+    width: 200px;
+}
+img.mainImageStart {
+    width: 200px;
+}
+img.mainImageStd:hover {
+  filter:   drop-shadow(2px 2px 0 white)
+            drop-shadow(-2px 2px 0 white)
+            drop-shadow(2px -2px 0 white)
+            drop-shadow(-2px -2px 0 white);
+            cursor: pointer;
+
+}
+img.mainImageStart:hover {
+    filter:   drop-shadow(2px 2px 0 green)
+              drop-shadow(-2px 2px 0 green)
+              drop-shadow(2px -2px 0 green)
+              drop-shadow(-2px -2px 0 green);
+  
+}
+img.mainImageStop:hover {
+    filter:   drop-shadow(2px 2px 0 red)
+              drop-shadow(-2px 2px 0 red)
+              drop-shadow(2px -2px 0 red)
+              drop-shadow(-2px -2px 0 red);
+  }
+
+/*------------------- tables -------------------*/
+
+table {
+    /*width: 100%;
+    /*border: 2px dashed greenyellow;*/
+}
+.scoreh {
+    height: 250px;
+}
+.sliver {
+    width: 10px;
+}
+.buttonh {
+    padding: 10px 0px 0px 0px;
+}
+td {
+    text-align: center;
+    /*border: 2px dashed rgb(231, 27, 153);*/
+    }
+
+td.greenBack {
+    background-color: greenyellow;
+}
+
+/*------------------- buttons -------------------*/
+
+button {
+    background-color: rgba(165, 158, 158, 0.75);
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 95px;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 40px;
+}
+button:hover {
+    cursor: pointer;
+    animation: fadedBorder;
+    animation-duration:400ms;
+    animation-fill-mode: forwards;
+
+}
+button:active {
+    border-color: rgb(39, 230, 39);
+}
+button#clockStart {
+/*background-color: #4CAF50; /* Green */
+}
+button#clockStop {
+    /*background-color: rgb(170, 46, 46);*/
+}
+button.plusMinus {
+    /*background-color: rgb(65, 91, 241);*/
+    font-size: 30px;
+    width: 55px;
+    padding: 0px;
+}
+button.plus {
+    /*background-color: rgb(65, 91, 241);*/
+    font-size: 30px;
+    width: 75px;
+    padding: 0px;
+}
+button.plus:hover {
+    cursor: cell;
+}
+button.gameOn {
+    width: 125px;
+    position: relative;
+    top: -90px;
+}
+button.minus {
+    /*background-color: rgb(107, 134, 221);*/
+    font-size: 30px;
+    width: 75px;
+    padding: 0px;
+}
+button.reset {
+    background-color: rgba(212, 36, 36, 0.75);
+}
+button.reset:hover {
+    cursor: pointer;
+}
+
+/*------------------  team names --------------------*/
+
+#homeName {
+    color: black;
+    background-color: rgb(158, 255, 1);
+    font-size: 5vw;
+    text-transform: uppercase;
+    padding: 0px 15px;
+    border: 10px solid rgba(255, 255, 255, 0);
+    border-radius: 60px;
+}
+#awayName {
+    color: black;
+    background-color: white;
+    font-size: 5vw;
+    text-transform: uppercase;
+    padding: 0px 15px;
+    border: 10px solid rgba(255, 255, 255, 0);
+    border-radius: 60px;
+}
+
+
+/* -------------- click to edit -------------- */
+.clickToEdit {
+    font-family: 'Oxanium', cursive;
+    color: white;
+    cursor: text;
+}
+.clickToEdit:hover::before {
+    content: "click to edit";
+    animation-name: fadedZoom;
+    animation-duration:250ms;
+    animation-fill-mode: forwards;
+}
+.clickToEdit:hover span {
+    display: none;
+}
+
+/* -------------- click to paste -------------- */
+.clickToPaste {
+    font-family: 'Oxanium', cursive;
+    color: white;
+    cursor: text;
+
+}
+.clickToPaste:hover::before {
+    content: "edit playlist";
+    animation-name: fadedZoom;
+    animation-duration:250ms;
+    animation-fill-mode: forwards;
+}
+.clickToPaste:hover img {
+    display: none;
+}
+
+/* -------------- click to reload -------------- */
+.clickToReload {
+    font-family: 'Oxanium', cursive;
+    color: white;
+    cursor: text;
+
+}
+.clickToReload:hover::before {
+    content: "reload spotify";
+    animation-name: fadedZoom;
+    animation-duration:250ms;
+    animation-fill-mode: forwards;
+}
+.clickToReload:hover img {
+    display: none;
+}
+
+/*------------------- digits -------------------*/
+
+.score {
+font-family: 'Segment7Standard';
+background-color: black;
+padding: 50px 10px 0px 10px;
+width: 40%;
+font-size: 18vw;
+color: red;
+border: 10px ridge red;
+border-radius: 50px;
+}
+.score:hover {
+    cursor: cell;
+}
+.time {
+font-family: 'Segment7Standard';
+background-color: black;
+padding: 50px 10px 0px 10px;
+font-size: 18vw;
+color: white;
+width: 40%;
+}
+.newTime {
+    font-family: 'Nova Mono', monospace;
+    background-color: black;
+    padding: 10px 0px;
+    font-size: 15vw;
+    color: white;
+    width: 40%;
+    }
+
+.outer {
+    width: 10%;
+}
+.innerOuter {
+    width: 15%;
+}
+.hoverPointer {
+    cursor: pointer;
+}
+
+/*--------------------------------------*/
+
+td.spotify {
+    text-align: center;
+    vertical-align: top;
+    width: 15vw;
+}
