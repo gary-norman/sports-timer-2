@@ -19,15 +19,22 @@ img:hover {
 /*--------------------  SETTINGS --------------------*/
 
 .settings {
-width: 600px;
+width: 450px;
+height: 30px;
 background: rgb(8,34,75);
 background: linear-gradient(180deg, rgba(8,34,75,1) 0%, rgba(9,53,121,1) 31%, rgba(14,125,219,1) 100%);
 justify-content: space-around;
+align-items: center;
 position: fixed;
-top: -2px;
-right: 2px;
+padding: 0px;
+top: -5px;
+right: 0px;
 border: 2px solid rgb(101, 163, 233);
-border-radius: 0px 0px 10px 10px;
+border-radius: 0px 0px 0px 10px;
+}
+
+#periodText, #periodTimeDisplay, #breakText, #breakTimeDisplay {
+margin: 0px;
 }
 
 /* ------------------------ FULLSCREEN _---------------*/
@@ -95,6 +102,10 @@ filter: drop-shadow(2px 2px 0 red)
     from {font-size: 0px; opacity: 0;}
     to {font-size: 30px; opacity: 1;}
 }
+@keyframes slideIn {
+    from {}
+    to {}
+}
 
 /* ------------- BUTTONS ------------- */
 
@@ -129,6 +140,9 @@ button.red:hover {
     animation-fill-mode: forwards;
 
 }
+
+
+/*------------------ FLEXBOX ------------------*/
 
 .flexVert {
     flex-direction: column;

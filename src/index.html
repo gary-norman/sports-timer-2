@@ -9,24 +9,23 @@
 <!--    <link rel="stylesheet" href="timer2.css">-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
     <title>Hockey Timer</title>
-    <style>
-       
-    </style>
+
 
   </head>
    <body>
+   <div class="settings">
+       <div class="flexGrow1"><p id="periodText" onmouseover="Edit Period Time" onclick="editPeriod()">PERIOD TIME</p></div>
+       <div class="flexGrow2 flexBetween">
+           <div id="periodTimeDisplay">20</div>
+           <div id="breakTimeDisplay">05</div>
+       </div>
+       <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
+   </div>
        <div class="full">
        <button onclick="document.documentElement.requestFullscreen()">FULL</button>
        <button onclick="closeFullscreen();">EXIT</button>
     </div>
-        <div class="settings">
-            <div class="flexGrow1"><p id="periodText" onclick="editPeriod()">PERIOD TIME</p></div>
-                <div class="flexGrow2 flexBetween">
-                    <p id="periodTimeDisplay">20</p>
-                        <p id="breakTimeDisplay">05</p>
-                </div>
-            <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
-        </div>
+
      <div>
          <div class="flexVert">
              <button class="plusMinus" id="homeMinus" onclick="minusOneToHome()">-</button>
@@ -60,7 +59,7 @@
                     <button class="red" id='clockReset' onclick="resetClock()">RESET</button>
             <button class="plusMinus"  id='clockMinus5' onclick="minusFiveToClock()">-5</button>
         </div>
-         <h1 class="time" id="timeDisplay" onclick="startTimer()">00:00</h1>
+         <h1 class="time" id="timeDisplay" onclick="mainButtonTimer()">00:00</h1>
             <div class="flexVert">
                 <button class="plusMinus" id='clockPlus1' onclick="plusOneToClock()">+1</button>
                     <button id='clockStop' onclick="stopTimer()">stop</button>

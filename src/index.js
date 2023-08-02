@@ -73,7 +73,7 @@ function editBreak() {
 }
 
 function renameHome() {
-    let userHome = prompt("Enter the home team name.");
+    let userHome = prompt("Enter the Home team name.");
     if (userHome === null || userHome == '') {
         return;
     }
