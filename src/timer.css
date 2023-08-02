@@ -28,10 +28,63 @@ align-items: center;
 position: fixed;
 padding: 0px;
 top: -5px;
-right: 0px;
+right: -452px;
 border: 2px solid rgb(101, 163, 233);
 border-radius: 0px 0px 0px 10px;
 }
+
+.menu-button-container {
+    /* display: none; */
+    /* height: 100%; */
+    width: 25px;
+    cursor: pointer;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+
+/*--------------------  menu button -------------*/
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: flex;
+  background-color: #fff;
+  position: fixed;
+  right: 454px;
+  /* position: absolute; */
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+/*  Adding Functionality to the Hamburger Menu with CSS  */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+ margin-top: 0px;
+ transform: rotate(45deg);
+  }
+  
+#menu-toggle:checked + .menu-button-container .menu-button {
+ background: rgba(255, 255, 255, 0);
+  }
+  
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+ margin-top: 0px;
+  /*  transforms the hamburger icon into a cross  */
+ transform: rotate(-45deg);
+  }
 
 #periodText, #periodTimeDisplay, #breakText, #breakTimeDisplay {
 margin: 0px;
@@ -102,9 +155,13 @@ filter: drop-shadow(2px 2px 0 red)
     from {font-size: 0px; opacity: 0;}
     to {font-size: 30px; opacity: 1;}
 }
-@keyframes slideIn {
-    from {}
-    to {}
+@keyframes slideInControls {
+    from {right: -452px}
+    to {right: -5px}
+}
+@keyframes slideInBurger {
+    from {right: 454px}
+    to {right: 3px}
 }
 
 /* ------------- BUTTONS ------------- */
