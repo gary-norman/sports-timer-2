@@ -167,6 +167,17 @@ button.red:hover {
     animation-fill-mode: forwards;
 
 }
+button.fullScrnBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 30px;
+    color: rgb(161, 161, 161);
+}
+button.fullScrnBtn:hover {
+    border: none;
+    animation: none;
+    color: #FFF;
+}
 
 
 /*------------------ FLEXBOX ------------------*/
@@ -224,8 +235,9 @@ font-weight: bold;
 background-color: white;
 font-size: 1vw;
 text-transform: uppercase;
-padding: 0px 15px;
-border: 10px solid rgba(255, 255, 255, 0);
+padding: 10px 15px;
+margin: 5px 0px;
+border: 1px solid rgba(255, 255, 255, 0);
 border-radius: 60px;
 }
 #awayName {
@@ -235,6 +247,7 @@ background-color: black;
 font-size: 1vw;
 text-transform: uppercase;
 padding: 10px 15px;
+margin: 5px 0px;
 border: 1px solid white;
 border-radius: 60px;
 }
@@ -244,6 +257,8 @@ border-radius: 60px;
 font-family: 'Oxanium', cursive;
 color: white;
 cursor: text;
+/* flex-direction: column; */
+
 }
 .clickToEdit:hover::before {
 content: "click to edit";
@@ -251,6 +266,7 @@ animation-name: fadedZoom;
 animation-duration:250ms;
 animation-fill-mode: forwards;
 }
-.clickToEdit:hover p {
-display: hidden;
+.clickToEdit:hover span {
+visibility: hidden;
+/* content: "click to edit"; */
 }

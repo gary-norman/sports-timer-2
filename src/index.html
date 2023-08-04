@@ -24,7 +24,7 @@
        <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
    </div>
        <div class="full">
-       <button onclick="document.documentElement.requestFullscreen()">FULL</button>
+       <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()">&#x26F6;</button>
        <button onclick="closeFullscreen();">EXIT</button>
     </div>
 
@@ -35,7 +35,7 @@
              <button class="plusMinus" id="homePlus"  onclick="plusOneToHome()">+</button>
          </div>
             <div class="flexVert">
-                <div id="clickToEditH" class="clickToEdit" onclick="renameHome()"><p id='homeName'>LIGHT</p></div>
+                <div id="clickToEditH" class="clickToEdit" onclick="renameHome()"><span id='homeName'>HOME</span></div>
                 <p class="score" id="homeScoreDisplay" onclick="plusOneToHome()">00<p>
             </div>
                 <div class="flexVert" style="justify-content: center; gap: 10px;">
@@ -44,7 +44,7 @@
                     <button class="gameOff" id="gameOff" onclick="gameOff()">BREAK</button>
                 </div>
                 <div class="flexVert">
-                    <div id="clickToEditA" class="clickToEdit" onclick="renameAway()"><p id="awayName">DARK</p></div>
+                    <div id="clickToEditA" class="clickToEdit" onclick="renameAway()"><span id="awayName">AWAY</span></div>
                     <p class="score" id="awayScoreDisplay" onclick="plusOneToAway()">00<p>
                 </div>
         <div class="flexVert">
