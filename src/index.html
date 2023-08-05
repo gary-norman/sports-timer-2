@@ -13,15 +13,15 @@
 
   </head>
    <body>
-    <button class="openbtn" onclick="openNav()" title="Open period settings">&#9776;</button>
+    <button class="openbtn" onclick="openNav()" aria-label="Open period settings" title="Open period settings">&#9776;</button>
        <div class="settings" id="settingsPanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-       <div class="flexGrow1"><p id="periodText"  onclick="editPeriod()">PERIOD TIME</p></div>
+       <div class="flexGrow1"><p id="periodText"  onclick="editPeriod()" title="Edit period time">PERIOD TIME</p></div>
        <div class="flexGrow2 flexBetween">
            <div id="periodTimeDisplay">20</div>
            <div id="breakTimeDisplay">05</div>
        </div>
-       <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
+       <div class="flexGrow1"><p id="breakText" onclick="editBreak()" title="Edit break time">BREAK TIME</p></div>
    </div>
        <div class="full">
        <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()" title="Enter fullscreen mode">
@@ -91,11 +91,11 @@
 
 
 
-                <p class="score" id="homeScoreDisplay" onclick="plusOneToHome()">00<p>
+                <p class="score" id="homeScoreDisplay" onclick="plusOneToHome()" title="Plus 1 point to home team">00<p>
             </div>
                 <div class="flexVert">
                     <button class="gameOn" id="gameOn" onclick="gameOn()" title="Set clock to default period time">PERIOD</button>
-                        <img id="mainImage" class="mainImageStd" onmouseover="mainButtonStyling()" onclick="mainButtonTimer()" src="logo.png" alt="BRHC logo">
+                        <img id="mainImage" class="mainImageStd" onmouseover="mainButtonStyling()" onclick="mainButtonTimer()" src="logo.png" alt="BRHC logo" title="Toggle timer">
                     <button class="gameOff" id="gameOff" onclick="gameOff()" title="Set clock to default break time">BREAK</button>
                 </div>
 
@@ -105,7 +105,7 @@
                         <button class="teamName" id="awayNameDisplay"  title="Display away team name">AWAY</button>
                     </div>
 
-                    <p class="score" id="awayScoreDisplay" onclick="plusOneToAway()">00<p>
+                    <p class="score" id="awayScoreDisplay" onclick="plusOneToAway()" title="Plus 1 point to away team">00<p>
                 </div>
 
         <div class="flexVert">
