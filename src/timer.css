@@ -149,10 +149,7 @@ button {
     border: 3px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
 }
-button.plusMinus {
-    /* font-size: 1vw; */
-    /* padding: 0px 15px; */
-}
+
 button:hover {
     cursor: pointer;
     animation: fadedBorder;
@@ -234,33 +231,6 @@ button.fullScrnBtn:hover {
     cursor: pointer;
 }
 /*------------------  TEAM NAMES --------------------*/
-
-.teamName {
-    font-weight: bold;
-    font-size: 1vw;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    border-radius: 10px;
-    width: 250px;
-    height: 35px;
-    position: relative;
-    top: -35px;
-    z-index: -1;
-}
-#homeNameDisplay {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgba(255, 255, 255, 0);
-    }
-#awayNameDisplay {
-    color: white;
-    background-color: black;
-    border: 1px solid white;
-    }
-
-/* -------------- CLICK TO EDIT -------------- */
-
 .teamsContainer {
     justify-content: center;
     border: 1px;
@@ -282,6 +252,33 @@ button.fullScrnBtn:hover {
     visibility: visible;
     cursor: text;
     }
+.teamName {
+    font-weight: bold;
+    font-size: 1vw;
+    text-transform: uppercase;
+    margin: 0;
+    /* padding: 0; */
+    border-radius: 10px;
+    /* width: 250px; */
+    height: 35px;
+    position: relative;
+    top: -18px;
+    z-index: -1;
+}
+#homeNameDisplay {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0);
+    }
+#awayNameDisplay {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    }
+
+/* -------------- CLICK TO EDIT -------------- */
+
+
 
 .clickToEdit {
 font-family: 'Oxanium', cursive;
@@ -292,6 +289,7 @@ width: 250px;
 height: 35px;
 align-items: center;
 position: relative;
+top: 17px;
 margin: 0;
 padding: 0;
 cursor: text;
