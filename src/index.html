@@ -24,10 +24,54 @@
        <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
    </div>
        <div class="full">
-       <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()" title="Enter full screen mode">&#x26F6;</button>
-       <button onclick="closeFullscreen();" title="Exit fullscfreen mode">EXIT</button>
-    </div>
-
+       <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()" title="Enter fullscreen mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" 
+                d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+          </svg>
+        <!-- <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
+            <g class="icon-fullscreen-enter">
+                <path d="M 2 9 v -7 h 7" />
+                <path d="M 22 9 v -7 h -7" />
+                <path d="M 22 15 v 7 h -7" />
+                <path d="M 2 15 v 7 h 7" />
+            </g>
+            
+            <g class="icon-fullscreen-leave">
+                <path d="M 24 17 h -7 v 7" />
+                <path d="M 0 17 h 7 v 7" />
+                <path d="M 0 7 h 7 v -7" />
+                <path d="M 24 7 h -7 v -7" />
+            </g>
+        </svg> -->
+    </button>
+       <button class="fullScrnBtn" onclick="closeFullscreen();" title="Exit fullscreen mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+        <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 
+            6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 
+            0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 
+            4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 
+            11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 
+            1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+      </svg></button>
+        </div>
+        <!-- <button class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode" hidden>
+            <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
+                <g class="icon-fullscreen-enter">
+                    <path d="M 2 9 v -7 h 7" />
+                    <path d="M 22 9 v -7 h -7" />
+                    <path d="M 22 15 v 7 h -7" />
+                    <path d="M 2 15 v 7 h 7" />
+                </g>
+                
+                <g class="icon-fullscreen-leave">
+                    <path d="M 24 17 h -7 v 7" />
+                    <path d="M 0 17 h 7 v 7" />
+                    <path d="M 0 7 h 7 v -7" />
+                    <path d="M 24 7 h -7 v -7" />
+                </g>
+            </svg>
+        </button> -->
      <div>
          <div class="flexVert">
              <button class="plusMinus" id="homeMinus" onclick="minusOneToHome()" title="Minus 1 point from home team">-</button>
