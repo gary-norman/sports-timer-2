@@ -13,7 +13,7 @@
 
   </head>
    <body>
-    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <button class="openbtn" onclick="openNav()" title="Open period settings">&#9776;</button>
        <div class="settings" id="settingsPanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
        <div class="flexGrow1"><p id="periodText"  onclick="editPeriod()">PERIOD TIME</p></div>
@@ -24,15 +24,15 @@
        <div class="flexGrow1"><p id="breakText" onclick="editBreak()">BREAK TIME</p></div>
    </div>
        <div class="full">
-       <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()">&#x26F6;</button>
-       <button onclick="closeFullscreen();">EXIT</button>
+       <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()" title="Enter full screen mode">&#x26F6;</button>
+       <button onclick="closeFullscreen();" title="Exit fullscfreen mode">EXIT</button>
     </div>
 
      <div>
          <div class="flexVert">
-             <button class="plusMinus" id="homeMinus" onclick="minusOneToHome()">-</button>
-                <button class="red" id="homeReset" onclick="resetHome()">RESET</button>
-             <button class="plusMinus" id="homePlus"  onclick="plusOneToHome()">+</button>
+             <button class="plusMinus" id="homeMinus" onclick="minusOneToHome()" title="Minus 1 point from home team">-</button>
+                <button class="red" id="homeReset" onclick="resetHome()" title="Reset home team score">RESET</button>
+             <button class="plusMinus" id="homePlus"  onclick="plusOneToHome()" title="Plus 1 point to home team">+</button>
          </div>
 
 
@@ -40,8 +40,8 @@
 
             <div class="flexTeams">
                 <div class="teamsContainer" id="clickToEditH" onclick="renameHome()">
-                    <button class="clickToEdit">click to edit</button>
-                    <button class="teamName" id='homeNameDisplay'>home</button>
+                    <button class="clickToEdit" title="Edit home team name">click to edit</button>
+                    <button class="teamName" id='homeNameDisplay' title="Display home team name">home</button>
                 </div>
 
 
@@ -50,24 +50,24 @@
                 <p class="score" id="homeScoreDisplay" onclick="plusOneToHome()">00<p>
             </div>
                 <div class="flexVert">
-                    <button class="gameOn" id="gameOn" onclick="gameOn()">PERIOD</button>
+                    <button class="gameOn" id="gameOn" onclick="gameOn()" title="Set clock to default period time">PERIOD</button>
                         <img id="mainImage" class="mainImageStd" onmouseover="mainButtonStyling()" onclick="mainButtonTimer()" src="logo.png" alt="BRHC logo">
-                    <button class="gameOff" id="gameOff" onclick="gameOff()">BREAK</button>
+                    <button class="gameOff" id="gameOff" onclick="gameOff()" title="Set clock to default break time">BREAK</button>
                 </div>
 
                 <div class="flexTeams">
                     <div class="teamsContainer" id="clickToEditA" onclick="renameAway()">
-                        <button class="clickToEdit">click to edit</button> 
-                        <button class="teamName" id="awayNameDisplay">AWAY</button>
+                        <button class="clickToEdit" title="Edit away team name">click to edit</button> 
+                        <button class="teamName" id="awayNameDisplay"  title="Display away team name">AWAY</button>
                     </div>
 
                     <p class="score" id="awayScoreDisplay" onclick="plusOneToAway()">00<p>
                 </div>
 
         <div class="flexVert">
-            <button class="plusMinus" id="awayMinus" onclick="minusOneToAway()">-</button>
-                <button class="red" id="awayReset" onclick="resetAway()">RESET</button>
-            <button class="plusMinus" id="awayPlus" onclick="plusOneToAway()">+</button>
+            <button class="plusMinus" id="awayMinus" onclick="minusOneToAway()" title="Minus 1 point from away team">-</button>
+                <button class="red" id="awayReset" onclick="resetAway()" title="Reset away team score">RESET</button>
+            <button class="plusMinus" id="awayPlus" onclick="plusOneToAway()" title="Plus 1 point to away team">+</button>
         </div>
 
 
@@ -75,17 +75,17 @@
 
      <div class="timeRow">
         <div class="flexVert">
-            <button class="plusMinus" id='clockMinus1' onclick="minusOneToClock()">-1</button>
-                <button id='clockStart' onclick="startTimer()">start</button>
-                    <button class="red" id='clockReset' onclick="resetClock()">RESET</button>
-            <button class="plusMinus"  id='clockMinus5' onclick="minusFiveToClock()">-5</button>
+            <button class="plusMinus" id='clockMinus1' onclick="minusOneToClock()" title="Minus 1 minute from clock">-1</button>
+                <button id='clockStart' onclick="startTimer()" title="Start clock">start</button>
+                    <button class="red" id='clockReset' onclick="resetClock()" title="Reset clock">RESET</button>
+            <button class="plusMinus"  id='clockMinus5' onclick="minusFiveToClock()" title="Minus 5 minutes from clock">-5</button>
         </div>
          <h1 class="time" id="timeDisplay" onclick="mainButtonTimer()">00:00</h1>
             <div class="flexVert">
-                <button class="plusMinus" id='clockPlus1' onclick="plusOneToClock()">+1</button>
+                <button class="plusMinus" id='clockPlus1' onclick="plusOneToClock()" title="Plus 1 minute to clock">+1</button>
                     <button id='clockStop' onclick="stopTimer()">stop</button>
-                        <button class="red" id='clockReset' onclick="resetClock()">RESET</button>
-                <button class="plusMinus" id='clockPlus5' onclick="plusFiveToClock()">+5</button>
+                        <button class="red" id='clockReset' onclick="resetClock()" title="Reset clock">RESET</button>
+                <button class="plusMinus" id='clockPlus5' onclick="plusFiveToClock()" title="Plus 5 minutes to clock">+5</button>
             </div>
         </div>
    </body>
