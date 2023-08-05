@@ -122,8 +122,8 @@ filter: drop-shadow(2px 2px 0 red)
     to {border: 3px solid rgb(243, 35, 35);}
 }
 @keyframes fadedZoom {
-    from {font-size: 0px; opacity: 0;}
-    to {font-size: 30px; opacity: 1;}
+    from {font-size: 0vw; opacity: 0;}
+    to {font-size: 1vw; opacity: 1;}
 }
 @keyframes slideInControls {
     from {right: -452px}
@@ -158,15 +158,14 @@ button:hover {
     animation: fadedBorder;
     animation-duration:400ms;
     animation-fill-mode: forwards;
-
 }
 button.red:hover {
     cursor: pointer;
     animation: fadedBorderRed;
     animation-duration:400ms;
     animation-fill-mode: forwards;
-
 }
+
 button.fullScrnBtn {
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -218,7 +217,7 @@ button.fullScrnBtn:hover {
 .score {
     font-family: 'Segment7Standard';
     margin: 0px;
-    padding: 60px 10px 0px 10px;
+    padding: 90px 10px 0px 10px;
     font-size: 23vw;
     border: 10px ridge red;
     border-radius: 50px;
@@ -229,44 +228,68 @@ button.fullScrnBtn:hover {
 }
 /*------------------  TEAM NAMES --------------------*/
 
-#homeName {
-color: black;
-font-weight: bold;
-background-color: white;
-font-size: 1vw;
-text-transform: uppercase;
-padding: 10px 15px;
-margin: 5px 0px;
-border: 1px solid rgba(255, 255, 255, 0);
-border-radius: 60px;
+.teamName {
+    font-weight: bold;
+    font-size: 1vw;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 250px;
+    height: 35px;
+    position: relative;
+    top: -35px;
+    z-index: -1;
 }
-#awayName {
-color: white;
-font-weight: bold;
-background-color: black;
-font-size: 1vw;
-text-transform: uppercase;
-padding: 10px 15px;
-margin: 5px 0px;
-border: 1px solid white;
-border-radius: 60px;
-}
+#homeNameDisplay {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0);
+    }
+#awayNameDisplay {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    }
 
 /* -------------- CLICK TO EDIT -------------- */
+
+.teamsContainer {
+    justify-content: center;
+    border: 1px;
+    border-color: red;
+    align-items: center;
+    flex-direction: column;
+}
+.teamsContainer:hover {
+    cursor: text;
+}
+.teamsContainer:hover .teamName {
+    visibility: hidden;
+    cursor: text;
+}
+.teamsContainer:hover .clickToEdit  {
+    animation-name: fadedZoom;
+    animation-duration:250ms;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    cursor: text;
+    }
+
 .clickToEdit {
 font-family: 'Oxanium', cursive;
+background-color: rgba(255, 255, 255, 0);
 color: white;
+font-size: 1vw;
+width: 250px;
+height: 35px;
+align-items: center;
+position: relative;
+margin: 0;
+padding: 0;
 cursor: text;
-/* flex-direction: column; */
-
-}
-.clickToEdit:hover::before {
-content: "click to edit";
-animation-name: fadedZoom;
-animation-duration:250ms;
-animation-fill-mode: forwards;
-}
-.clickToEdit:hover span {
+justify-content: center;
 visibility: hidden;
-/* content: "click to edit"; */
 }
+
+

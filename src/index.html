@@ -34,8 +34,19 @@
                 <button class="red" id="homeReset" onclick="resetHome()">RESET</button>
              <button class="plusMinus" id="homePlus"  onclick="plusOneToHome()">+</button>
          </div>
+
+
+
+
             <div class="flexVert">
-                <div id="clickToEditH" class="clickToEdit" onclick="renameHome()"><span id='homeName'>HOME</span></div>
+                <div class="teamsContainer" id="clickToEditH" onclick="renameHome()">
+                    <button class="clickToEdit">click to edit</button>
+                    <button class="teamName" id='homeNameDisplay'>home</button>
+                </div>
+
+
+
+
                 <p class="score" id="homeScoreDisplay" onclick="plusOneToHome()">00<p>
             </div>
                 <div class="flexVert" style="justify-content: center; gap: 10px;">
@@ -43,15 +54,23 @@
                         <img id="mainImage" class="mainImageStd" onmouseover="mainButtonStyling()" onclick="mainButtonTimer()" src="logo.png" alt="BRHC logo">
                     <button class="gameOff" id="gameOff" onclick="gameOff()">BREAK</button>
                 </div>
+
                 <div class="flexVert">
-                    <div id="clickToEditA" class="clickToEdit" onclick="renameAway()"><span id="awayName">AWAY</span></div>
+                    <div class="teamsContainer" id="clickToEditA" onclick="renameAway()">
+                        <button class="clickToEdit">click to edit</button> 
+                        <button class="teamName" id="awayNameDisplay">AWAY</button>
+                    </div>
+
                     <p class="score" id="awayScoreDisplay" onclick="plusOneToAway()">00<p>
                 </div>
+
         <div class="flexVert">
             <button class="plusMinus" id="awayMinus" onclick="minusOneToAway()">-</button>
                 <button class="red" id="awayReset" onclick="resetAway()">RESET</button>
             <button class="plusMinus" id="awayPlus" onclick="plusOneToAway()">+</button>
         </div>
+
+
      </div>
 
      <div class="timeRow">
