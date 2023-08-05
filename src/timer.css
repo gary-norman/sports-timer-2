@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Orbitron&family=Oxanium&family=Sarpanch:wght@600&family=Tomorrow&display=swap');
 
-body {background-color: black;
+body {background-color: rgb(0, 0, 0);
     color: white;
     font-family: 'Orbitron', sans-serif;
     
@@ -52,7 +52,7 @@ transition: 0.5s;
     padding: 0;
     margin: 0px 8px;
     border: none;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     color: rgb(159, 193, 208);
 }
 
@@ -140,18 +140,18 @@ button {
     background-color: rgba(165, 158, 158, 0.75);
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1vw;
     font-weight: bold;
     color: white;
-    padding: 5px;
-    margin: 5px;
+    /* padding: 5px;
+    margin: 5px; */
     text-decoration: none;
     border: 3px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
 }
 button.plusMinus {
-    font-size: 40px;
-    padding: 0px 15px;
+    /* font-size: 1vw; */
+    /* padding: 0px 15px; */
 }
 button:hover {
     cursor: pointer;
@@ -183,9 +183,15 @@ button.fullScrnBtn:hover {
 
 .flexVert {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+.flexTeams {
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
 }
 .flexBetween {
     justify-content: space-between;
@@ -217,6 +223,7 @@ button.fullScrnBtn:hover {
 .score {
     font-family: 'Segment7Standard';
     margin: 0px;
+    background-color: rgba(0, 0, 0, 0.516);
     padding: 90px 10px 0px 10px;
     font-size: 23vw;
     border: 10px ridge red;
