@@ -1,6 +1,6 @@
 server {
-    listen 5556 default_server;
-    listen [::]:5556 default_server;
+    listen 5557 default_server;
+    listen [::]:5557 default_server;
     
     root /usr/share/nginx/html;
     index index.html index.htm;

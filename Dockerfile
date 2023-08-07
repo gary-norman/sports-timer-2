@@ -1,8 +1,2 @@
-FROM ubuntu
-RUN apt-get update &&  apt-get install nginx -y
-COPY default /etc/nginx/sites-available/default
-COPY src/ /usr/share/nginx/html
-COPY src/js/ /usr/share/nginx/html/js
-COPY src/assets/ /usr/share/nginx/html/assets
-EXPOSE 5556
-CMD ["/usr/sbin/nginx","-g","daemon off;"]
+FROM nginx
+COPY . /usr/share/nginx/html

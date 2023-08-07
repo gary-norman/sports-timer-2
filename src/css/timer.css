@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Orbitron&family=Oxanium&family=Sarpanch:wght@600&family=Tomorrow&display=swap');
+
+body {background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+div {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 200px;
+}
+img:hover {
+    cursor: pointer;
+}
+
+/*--------------------  SETTINGS --------------------*/
+
+.settings {
+width: 450px;
+height: 30px;
+background: rgb(8,34,75);
+background: linear-gradient(180deg, rgba(8,34,75,1) 0%, rgba(9,53,121,1) 31%, rgba(14,125,219,1) 100%);
+justify-content: space-around;
+align-items: center;
+position: fixed;
+padding: 0px;
+top: -5px;
+right: -452px;
+border: 2px solid rgb(101, 163, 233);
+border-radius: 0px 0px 0px 10px;
+overflow-x: hidden;
+transition: 0.5s;
+}
+
+.closebtn {
+    padding: 0px 0px 5px 5px;
+    font-size: 32px;
+    text-decoration: none;
+    color: #97bbfa;
+}
+.closebtn:hover {
+    color: rgb(73, 29, 29);
+}
+
+.openbtn {
+    position: fixed;
+    right: 5px;
+    font-size: 20px;
+    padding: 0;
+    margin: 0px 8px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(159, 193, 208);
+}
+
+.openbtn:hover {
+    animation: none;
+    color: #FFF;
+}
+/* ------------------------ FULLSCREEN _---------------*/
+
+.full {
+position: fixed;
+top: 5px;
+left: 5px;
+}
+.openFull {
+position: fixed;
+top: 5px;
+left: 5px;
+width: 25px;
+}
+
+.closefull {
+position: fixed;
+top: 5px;
+left: 135px;
+width: 25px;
+}
+button.fullScrnBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 30px;
+    color: rgb(161, 161, 161);
+}
+button.fullScrnBtn:hover {
+    border: none;
+    animation: none;
+    color: #FFF;
+}
+/* .toggle-fullscreen-btn {
+	position: fixed;
+	z-index: 10000;
+	top: 10px;
+	left: 10px;
+	border: 0;
+	padding: 0;
+	background: none;
+	cursor: pointer;
+	outline: none;
+}
+
+
+.toggle-fullscreen-svg {
+	display: block;
+	height: auto;
+}
+
+.toggle-fullscreen-svg path {
+	transform-box: view-box;
+	transform-origin: 12px 12px;
+	fill: none;
+	stroke: hsl(225, 10%, 8%);
+	stroke-width: 4;
+	transition: .15s;
+}
+
+
+.toggle-fullscreen-btn:hover path:nth-child(1),
+.toggle-fullscreen-btn:focus path:nth-child(1) {
+	transform: translate(-2px, -2px);
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(2),
+.toggle-fullscreen-btn:focus path:nth-child(2) {
+	transform: translate(2px, -2px);
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(3),
+.toggle-fullscreen-btn:focus path:nth-child(3) {
+	transform: translate(2px, 2px);
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(4),
+.toggle-fullscreen-btn:focus path:nth-child(4) {
+	transform: translate(-2px, 2px);
+}
+
+
+.toggle-fullscreen-btn:not(.on) .icon-fullscreen-leave {
+	display: none;
+}
+
+.toggle-fullscreen-btn.on .icon-fullscreen-enter {
+	display: none;
+} */
+
+/*-------------------- MAIN IMAGE ------------------*/
+img.mainImageStd {
+    width: 200px;
+}
+img.mainImageStop {
+    width: 200px;
+}
+img.mainImageStart {
+ width: 200px;
+}
+img.mainImageStd:hover {
+filter: drop-shadow(2px 2px 0 white)
+        drop-shadow(-2px 2px 0 white)
+        drop-shadow(2px -2px 0 white)
+        drop-shadow(-2px -2px 0 white);
+}
+img.mainImageStart:hover {
+filter: drop-shadow(2px 2px 0 green)
+        drop-shadow(-2px 2px 0 green)
+        drop-shadow(2px -2px 0 green)
+        drop-shadow(-2px -2px 0 green);
+
+}
+img.mainImageStop:hover {
+filter: drop-shadow(2px 2px 0 red)
+        drop-shadow(-2px 2px 0 red)
+        drop-shadow(2px -2px 0 red)
+        drop-shadow(-2px -2px 0 red);
+}
+
+/* ------------- ANIMATIONS ------------- */
+
+@keyframes fadedBorder {
+    from {border: 3px solid rgba(255, 255, 255, 0);}
+    to {border: 3px solid rgba(255, 255, 255, 1);}
+}
+@keyframes fadedBorderRed {
+    from {border: 3px solid rgba(255, 255, 255, 0);}
+    to {border: 3px solid rgb(243, 35, 35);}
+}
+@keyframes fadedZoom {
+    from {font-size: 0vw; opacity: 0;}
+    to {font-size: 1vw; opacity: 1;}
+}
+@keyframes slideInControls {
+    from {right: -452px}
+    to {right: -5px}
+}
+@keyframes slideInBurger {
+    from {right: 454px}
+    to {right: 3px}
+}
+
+/* ------------- BUTTONS ------------- */
+
+button {
+    background-color: rgba(165, 158, 158, 0.75);
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-weight: bold;
+    color: white;
+    /* padding: 5px;
+    margin: 5px; */
+    text-decoration: none;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    animation: fadedBorder;
+    animation-duration:400ms;
+    animation-fill-mode: forwards;
+}
+button.red:hover {
+    cursor: pointer;
+    animation: fadedBorderRed;
+    animation-duration:400ms;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+/*------------------ FLEXBOX ------------------*/
+
+.flexVert {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+.flexTeams {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.flexBetween {
+    justify-content: space-between;
+}
+.flexGrow1 {
+    flex-grow: 1;
+    visibility: visible;
+    transition: 0.7s;
+}
+.flexGrow2 {
+    flex-grow: 2;
+    visibility: visible;
+    transition: 0.7s;
+}
+
+
+
+/* ------------- DIGITS ------------- */
+.time {
+    font-family: 'Nova Mono', monospace;
+    margin: 10px;
+    padding: 10px;
+    font-size: 22vw;
+    line-height: 0.75em;
+}
+.time:hover {
+    cursor: pointer;
+}
+.score {
+    font-family: 'Segment7Standard';
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.516);
+    padding: 90px 10px 0px 10px;
+    font-size: 23vw;
+    border: 10px ridge red;
+    border-radius: 50px;
+    line-height: 0.8em;
+}
+.score:hover {
+    cursor: pointer;
+}
+/*------------------  TEAM NAMES --------------------*/
+.teamsContainer {
+    justify-content: center;
+    border: 1px;
+    border-color: red;
+    align-items: center;
+    flex-direction: column;
+}
+.teamsContainer:hover {
+    cursor: text;
+}
+.teamsContainer:hover .teamName {
+    visibility: hidden;
+    cursor: text;
+}
+.teamsContainer:hover .clickToEdit  {
+    animation-name: fadedZoom;
+    animation-duration:250ms;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    cursor: text;
+    }
+.teamName {
+    font-weight: bold;
+    font-size: 1vw;
+    text-transform: uppercase;
+    margin: 0;
+    /* padding: 0; */
+    border-radius: 10px;
+    /* width: 250px; */
+    height: 35px;
+    position: relative;
+    top: -18px;
+    z-index: -1;
+}
+#homeNameDisplay {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0);
+    }
+#awayNameDisplay {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    }
+
+/* -------------- CLICK TO EDIT -------------- */
+
+
+
+.clickToEdit {
+font-family: 'Oxanium', cursive;
+background-color: rgba(255, 255, 255, 0);
+color: white;
+font-size: 1vw;
+width: 250px;
+height: 35px;
+align-items: center;
+position: relative;
+top: 17px;
+margin: 0;
+padding: 0;
+cursor: text;
+justify-content: center;
+visibility: hidden;
+}
+
+
