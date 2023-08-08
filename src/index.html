@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="js/index.js"></script>
     <link rel="icon" sizes="16x16 32x32" type="image/png" href="favicon.ico">
+    <link rel="preload" as="style" href="css/timer.css">
+    <link rel="preload" media="screen" as="font" href="https://fontlibrary.org//face/segment7" type="text/css" crossorigin>
+    <link rel="preload" as="script" href="js/index.js">
     <link rel="stylesheet" href="css/timer.css">
-<!--    <link rel="stylesheet" href="timer2.css">-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
     <title>Hockey Timer</title>
 
 
   </head>
    <body id="mainPage">
-    <audio id="buzzerAudio" src="buzzer.mp3"></audio>
+    <audio id="buzzerAudio" src="assets/buzzer.mp3"></audio>
     <button class="openbtn" onclick="openNav()" aria-label="Open period settings" title="Open period settings">&#9776;</button>
        <div class="settings" id="settingsPanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -133,5 +134,7 @@
                 <button class="plusMinus" id='clockPlus5' onclick="plusFiveToClock()" title="Plus 5 minutes to clock">+5</button>
             </div>
         </div>
+        
+    <script async src="js/index.js"></script>
    </body>
 </html>
