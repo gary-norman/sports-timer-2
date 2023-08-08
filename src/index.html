@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="16x16 32x32" type="image/png" href="favicon.ico">
     <link rel="preload" as="style" href="css/timer.css">
-    <link rel="preload" media="screen" as="font" href="https://fontlibrary.org//face/segment7" type="text/css" crossorigin>
+    <link rel="preload" media="screen" as="font" href="https://fontlibrary.org//face/segment7" type="font/segment7" crossorigin>
     <link rel="preload" as="script" href="js/index.js">
     <link rel="stylesheet" href="css/timer.css">
+    <script async src="js/index.js"></script>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
     <title>Hockey Timer</title>
 
@@ -26,7 +27,7 @@
        <div class="flexGrow1"><p id="breakText" onclick="editBreak()" title="Edit break time">BREAK TIME</p></div>
    </div>
        <div class="full">
-       <button class="fullScrnBtn" onclick="document.documentElement.requestFullscreen()" title="Enter fullscreen mode">
+       <button class="fullScrnBtn" onclick="openFullscreen()" title="Enter fullscreen mode">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
             <path fill-rule="evenodd" 
                 d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
@@ -47,7 +48,7 @@
             </g>
         </svg> -->
     </button>
-       <button class="fullScrnBtn" onclick="closeFullscreen();" title="Exit fullscreen mode">
+       <button class="exitFullScrnBtn" onclick="closeFullscreen()" title="Exit fullscreen mode">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
         <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 
             6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 
@@ -135,6 +136,6 @@
             </div>
         </div>
         
-    <script async src="js/index.js"></script>
+    
    </body>
 </html>

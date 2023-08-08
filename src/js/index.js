@@ -42,7 +42,7 @@ const homeNameValue = document.getElementById('homeNameDisplay');
 const awayNameValue = document.getElementById('awayNameDisplay');
 
 //populate HTML
-periodValue.innerHTML = (pad2(period));
+//periodValue.innerHTML = (pad2(period));
 periodTimeValue.innerHTML = (pad2(periodTime));
 breakTimeValue.innerHTML = (pad2(breakTime));
 homeScoreValue.innerHTML = (pad2(homeScoreJs));
@@ -273,7 +273,7 @@ function mainButtonStyling() {
 
 // fullscreen
 
-/* Get the documentElement (<html>) to visibility the page in fullscreen */
+/* Get the documentElement (<html>) to show the page in fullscreen */
 var elem = document.documentElement;
 
 /* View in fullscreen */
@@ -281,9 +281,9 @@ function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
+  elem.webkitRequestFullscreen();
   } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
+  elem.msRequestFullscreen();
   }
 }
 
